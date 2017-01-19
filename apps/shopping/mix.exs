@@ -19,8 +19,14 @@ defmodule Redfour.Shopping.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [
-      applications: [:logger],
+      applications: [:logger, :moebius],
       mod: {Redfour.Shopping, []} #add this
+    ]
+  end
+
+  defp deps do
+    [
+      {:moebius, github: "robconery/moebius", branch: "dbworker"}
     ]
   end
 
